@@ -6,22 +6,22 @@ import { Check, Clock, FileText, Zap, Shield, Users } from 'lucide-react';
 const LandingPage = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-apple-blue-500" />,
+      icon: <Zap className="w-8 h-8 text-gray-900" />,
       title: "IA Avançada",
       description: "Tecnologia de ponta que entende as nuances do mercado imobiliário"
     },
     {
-      icon: <Clock className="w-8 h-8 text-apple-blue-500" />,
+      icon: <Clock className="w-8 h-8 text-gray-900" />,
       title: "40 Segundos",
       description: "Tempo record para gerar contratos completos e juridicamente válidos"
     },
     {
-      icon: <Shield className="w-8 h-8 text-apple-blue-500" />,
+      icon: <Shield className="w-8 h-8 text-gray-900" />,
       title: "100% Seguro",
       description: "Contratos revisados por especialistas jurídicos em direito imobiliário"
     },
     {
-      icon: <FileText className="w-8 h-8 text-apple-blue-500" />,
+      icon: <FileText className="w-8 h-8 text-gray-900" />,
       title: "Personalização Total",
       description: "Adapte cada cláusula às suas necessidades específicas"
     }
@@ -55,20 +55,21 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
+              <img src="/logo.png" alt="Logo" className="h-10 w-10 mr-3" />
               <div className="text-2xl font-bold text-gray-900 tracking-tight">Contract Pro</div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-apple-blue-500 transition-colors font-medium">
+              <a href="#features" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
                 Recursos
               </a>
-              <a href="#testimonials" className="text-gray-700 hover:text-apple-blue-500 transition-colors font-medium">
+              <a href="#testimonials" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
                 Depoimentos
               </a>
-              <a href="#pricing" className="text-gray-700 hover:text-apple-blue-500 transition-colors font-medium">
+              <a href="#pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
                 Preços
               </a>
             </nav>
-            <Button className="bg-apple-blue-500 hover:bg-apple-blue-600 text-white font-semibold shadow-none px-6 py-2 rounded-lg">
+            <Button className="bg-gray-900 hover:bg-gray-800 text-white font-semibold shadow-none px-6 py-2 rounded-lg">
               Começar Agora
             </Button>
           </div>
@@ -82,7 +83,7 @@ const LandingPage = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Contratos Imobiliários
               <br />
-              <span className="text-apple-blue-500">em 40 segundos</span>
+              <span className="text-gray-700">em 40 segundos</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
               A primeira IA especializada em contratos imobiliários do Brasil. 
@@ -91,14 +92,14 @@ const LandingPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button 
                 size="lg" 
-                className="bg-apple-blue-500 hover:bg-apple-blue-600 text-white px-8 py-4 text-lg font-medium rounded-xl transition-all duration-300 shadow-none"
+                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-xl transition-all duration-300 shadow-none"
               >
                 Experimentar Grátis
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-gray-300 text-gray-700 hover:bg-gray-100 px-8 py-4 text-lg rounded-xl"
+                className="border-gray-300 text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg rounded-xl"
               >
                 Ver Demonstração
               </Button>
@@ -109,14 +110,14 @@ const LandingPage = () => {
             <div className="bg-gray-50 rounded-3xl p-8 max-w-2xl mx-auto border border-gray-200">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-sm text-gray-500">Gerando contrato...</div>
-                <div className="flex items-center text-apple-blue-500">
+                <div className="flex items-center text-gray-900">
                   <Clock className="w-4 h-4 mr-1" />
                   <span className="text-sm font-medium">40s</span>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="h-4 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-apple-blue-500 rounded-full w-full animate-pulse"></div>
+                  <div className="h-full bg-gray-900 rounded-full w-full animate-pulse"></div>
                 </div>
                 <div className="text-left space-y-2 text-sm text-gray-600">
                   <div className="flex items-center">
@@ -154,7 +155,7 @@ const LandingPage = () => {
               <Card key={index} className="border border-gray-200 shadow-none bg-white hover:shadow-md transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
                   <div className="flex justify-center mb-6">
-                    {feature.icon}
+                    {React.cloneElement(feature.icon, { className: 'w-8 h-8 text-gray-900' })}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}
@@ -174,15 +175,15 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold text-apple-blue-500 mb-2">40s</div>
+              <div className="text-5xl font-bold text-gray-900 mb-2">40s</div>
               <div className="text-gray-600">Tempo médio de geração</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-apple-blue-500 mb-2">99.9%</div>
+              <div className="text-5xl font-bold text-gray-900 mb-2">99.9%</div>
               <div className="text-gray-600">Precisão jurídica</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-apple-blue-500 mb-2">5000+</div>
+              <div className="text-5xl font-bold text-gray-900 mb-2">5000+</div>
               <div className="text-gray-600">Contratos gerados</div>
             </div>
           </div>
@@ -203,7 +204,7 @@ const LandingPage = () => {
                 <CardContent className="p-8">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-apple-blue-500 text-xl">★</span>
+                      <span key={i} className="text-gray-900 text-xl">★</span>
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 italic leading-relaxed">
@@ -221,7 +222,7 @@ const LandingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-apple-blue-500">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Pronto para revolucionar seu negócio?
@@ -231,7 +232,7 @@ const LandingPage = () => {
           </p>
           <Button 
             size="lg"
-            className="bg-white text-apple-blue-500 hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl transition-all duration-300 shadow-none"
+            className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl transition-all duration-300 shadow-none"
           >
             Começar Teste Gratuito
           </Button>
