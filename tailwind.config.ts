@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -80,7 +79,9 @@ export default {
 						500: '#007aff',
 						600: '#0056b3'
 					}
-				}
+				},
+				'apple-blue-500': '#007aff',
+				'apple-blue-600': '#0056b3',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -135,7 +136,15 @@ export default {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-apple': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 				'gradient-subtle': 'linear-gradient(145deg, #f0f0f0 0%, #ffffff 100%)'
-			}
+			},
+			fontFamily: {
+				sans: [
+					'SF Pro Display',
+					'Helvetica Neue',
+					'Arial',
+					'sans-serif',
+				],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
